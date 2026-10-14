@@ -1,0 +1,60 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TPP Secure Media Videos 2.0: The Whole Stack</title><meta name="description" content="One partner. The whole stack.">
+<meta property="og:title" content="TPP Secure Media Videos 2.0: The Whole Stack">
+<meta property="og:description" content="One partner. The whole stack.">
+<meta property="og:type" content="video.other">
+<meta property="og:url" content="https://teond1090.github.io/tpp-secure-media-videos-2.0/stack/">
+<meta name="twitter:card" content="player">
+<meta property="og:image" content="https://teond1090.github.io/tpp-secure-media-videos-2.0/media/stack.jpg">
+<meta name="twitter:image" content="https://teond1090.github.io/tpp-secure-media-videos-2.0/media/stack.jpg">
+<meta property="og:video" content="https://teond1090.github.io/tpp-secure-media-videos-2.0/media/stack.mp4">
+<meta property="og:video:secure_url" content="https://teond1090.github.io/tpp-secure-media-videos-2.0/media/stack.mp4">
+<meta property="og:video:type" content="video/mp4">
+<meta property="og:video:width" content="1920">
+<meta property="og:video:height" content="1080">
+<style>
+:root{--dark:#f4f1f2;--btn:#B3202A;--ink:#0f172a;--mut:#5b6474}
+*{box-sizing:border-box}body{margin:0;font-family:Segoe UI,system-ui,-apple-system,sans-serif;background:#f4f6fb;color:var(--ink)}
+header{background:var(--dark);color:#1a1a20;padding:28px 20px;text-align:center}header img{height:70px}
+header p{margin:10px 0 0;opacity:.85;font-size:15px}
+main{max-width:1180px;margin:0 auto;padding:28px 16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(460px,1fr));gap:26px}
+.card{background:#fff;border-radius:18px;box-shadow:0 10px 30px rgba(0,0,0,.10);overflow:hidden}
+.card .vwrap{position:relative}.card .vwrap video{width:100%;aspect-ratio:16/9;background:#000;display:block}
+.body{padding:16px 18px 20px}h2{margin:0 0 6px;font-size:20px}h1{margin:0;font-size:26px}
+.meta{color:var(--mut);font-size:13px;margin-bottom:12px}
+.btn{display:inline-block;background:var(--btn);color:#fff;text-decoration:none;padding:11px 16px;border-radius:999px;font-weight:600;font-size:14px;margin:4px 6px 4px 0}
+.btn.alt{background:#eef2f5;color:var(--dark)}
+.cap{background:#f7f8fb;border:1px solid #e6e9f2;border-radius:12px;padding:12px;font-size:14px;white-space:pre-wrap;margin-top:12px}
+.single{max-width:1100px;margin:0 auto}
+footer{text-align:center;color:var(--mut);font-size:13px;padding:30px}
+</style></head>
+<body><header><img src="https://teond1090.github.io/tpp-secure-media-videos-2.0/media/logo.png" alt="TPP Secure"><p>Protect your tenants. Grow your revenue. One partner, the whole TPP stack.</p></header>
+<main><div class="card single">
+<div class="vwrap" style="background:#000 url('https://teond1090.github.io/tpp-secure-media-videos-2.0/media/stack.jpg') center/cover no-repeat"><video controls playsinline preload="auto" poster="https://teond1090.github.io/tpp-secure-media-videos-2.0/media/stack.jpg" src="https://teond1090.github.io/tpp-secure-media-videos-2.0/media/stack.mp4"></video></div>
+<div class="body"><h2>The Whole Stack</h2><div class="meta">55 s &middot; 16:9 HD (1920×1080, MP4 H.264), light version, for event screens, YouTube, LinkedIn and Facebook</div>
+<a class="btn" href="https://teond1090.github.io/tpp-secure-media-videos-2.0/media/stack.mp4" download>Download 16:9 HD (1920×1080)</a>
+<div class="cap"><b>Suggested post</b>
+One partner. The whole stack.
+
+TPP Secure protects what your tenants store, and the rest of the TPP stack covers everything else on your property: RV Park &#x27;N&#x27; Protect, Mobile Container, Flex Space, and a Business Owner Policy with Excess General Liability. Protect your tenants. Grow your revenue. #TPPSecure #SelfStorage #TenantProtection</div>
+
+</div></div></main><footer>TPP Secure &middot; <a href="https://tenantpropertyprotection.com/">tenantpropertyprotection.com</a> &middot; Booth #527 · 877-575-7774</footer>
+<script>
+// Autoplay: once the first video has loaded, wait 2 s, then play. Browsers only allow this muted, so it starts muted;
+// a tap on the video (or the player's mute control) turns the sound on.
+document.querySelectorAll('.card .vwrap video').forEach(function(v, i){
+  var wrap = v.parentElement;
+  v.addEventListener('click', function(){ if (v.muted) { v.muted = false; if (v.paused) v.play().catch(function(){}); } });
+  v.addEventListener('error', function(){   // decode/network failure: show the poster image instead of a black box
+    var img = document.createElement('img'); img.src = v.poster; img.style.cssText = 'width:100%;display:block'; wrap.replaceChild(img, v);
+  });
+  var started = false;
+  function go(){ if (started) return; started = true; setTimeout(function(){ v.muted = true; v.play().catch(function(){}); }, 2000); }
+  if (i === 0) {
+    v.preload = 'auto';
+    if (v.readyState >= 2) go(); else v.addEventListener('loadeddata', go, {once:true});
+    v.load();
+  }
+});
+</script></body></html>
